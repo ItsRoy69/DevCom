@@ -1,7 +1,7 @@
 <p align="center">   
    <img src="https://user-images.githubusercontent.com/78967360/163656629-cf9a86e4-e6b0-40af-8506-1e3257b9b19c.png" width="100%">
 
-   <h1 align="center">Devmeet</h1>
+   <h1 align="center">Devcom</h1>
    <p align="center">Easily find people for your hackathons & projects!</p>
 </p>
 
@@ -18,13 +18,13 @@
 </div>
 
 
-## What is Devmeet ? 🤔
+## What is Devcom ? 🤔
 
 A web application where we can search for developers looking to do hackathons or projects. Developers can connect with each others and whenever someone needs a new developer they can check this web app .
 
  ## Checkout our app to learn more!
 
-Link: https://devmeet.netlify.app/
+Link: https://Devcom.netlify.app/
 
 ## Architecture of the web app
 
@@ -49,7 +49,7 @@ First, make sure you have all these installed on your local machine & then conti
 
 ```bash
 # Clone the repository
-git clone https://github.com/ItsRoy69/Devmeet.git
+git clone https://github.com/ItsRoy69/Devcom.git
 # Enter into the client
 cd client
 npm install
