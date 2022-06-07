@@ -24,7 +24,8 @@ A web application where we can search for developers looking to do hackathons or
 
  ## Checkout our app to learn more!
 
-Link: https://Devcom.netlify.app/
+Link: https://devcom-xi.vercel.app/
+<br/>
 Backend: https://devcom69.herokuapp.com
 
 ## Architecture of the web app
