@@ -1,5 +1,5 @@
 <p align="center">   
-   <img src="https://user-images.githubusercontent.com/78967360/163656629-cf9a86e4-e6b0-40af-8506-1e3257b9b19c.png" width="100%">
+   <img src="https://user-images.githubusercontent.com/78967360/172301759-8e487fce-7351-4f7e-91c1-8500eaf4d1ff.png" width="100%">
 
    <h1 align="center">Devcom</h1>
    <p align="center">Easily find people for your hackathons & projects!</p>
@@ -70,10 +70,3 @@ npm start
 # To start server application
 npm run start
 ```
-
-## Team
-
-<a href="https://github.com/anomic30/Chatterpay-discord-bot/graphs/contributors">
-  <img src="https://user-images.githubusercontent.com/78967360/161389591-4bb7b875-5c81-404c-9ae2-80bdc2e44d80.png" />
-</a>
-
