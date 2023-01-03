@@ -9,7 +9,7 @@ export const RegisterUser = async (credentials) => {
   try {
     console.log(credentials);
 
-    const Post = await Axios.post(` https://devcom69.herokuapp.com/register`, credentials);
+    const Post = await Axios.post(` https://devcom-production.up.railway.app/register`, credentials);
 
     return Post;
   } catch (error) {
@@ -24,7 +24,7 @@ export const LoginUser = async (credentials) => {
   try {
     console.log(credentials);
 
-    const Post = await Axios.post(` https://devcom69.herokuapp.com/login`, credentials);
+    const Post = await Axios.post(` https://devcom-production.up.railway.app/login`, credentials);
 
     return Post;
   } catch (error) {
@@ -39,7 +39,7 @@ export const PostFeed = async (details) => {
   try {
     console.log(details);
 
-    const Post = await Axios.post(` https://devcom69.herokuapp.com/post-feed`, details);
+    const Post = await Axios.post(` https://devcom-production.up.railway.app/post-feed`, details);
 
     return Post;
   } catch (error) {
@@ -52,7 +52,7 @@ export const PostFeed = async (details) => {
 
 export const GetAllPosts = async () => {
   try {
-    const Posts = await Axios.get(` https://devcom69.herokuapp.com/getAllPosts`);
+    const Posts = await Axios.get(` https://devcom-production.up.railway.app/getAllPosts`);
 
     return Posts;
   } catch (error) {
@@ -66,7 +66,7 @@ export const UpdateUser = async (userId, details) => {
   try {
     console.log(details);
 
-    const Submission = await Axios.patch(`https://devcom69.herokuapp.com/updateUser/${userId}`, details);
+    const Submission = await Axios.patch(`https://devcom-production.up.railway.app/updateUser/${userId}`, details);
 
     return Submission;
   } catch (error) {

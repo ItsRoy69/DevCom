@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 const credCheck = async function(res){
     
-    const result = await Axios.post('https://devcom69.herokuapp.com/login-with-google',{
+    const result = await Axios.post('https://devcom-production.up.railway.app/login-with-google',{
             email : res.user.email
     }).catch((e) => {
         alert("Please Register.");

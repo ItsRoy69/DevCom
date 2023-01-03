@@ -15,10 +15,10 @@ const Chat = () => {
   const [search, setSearch] = useState("");
   const [searchRes, setSearchRes] = useState([]);
   const [selectedSpace, setSelectedSpace] = useState("");
-  const ENDPOINT = `https://devcom69.herokuapp.com`;
+  const ENDPOINT = `https://devcom-production.up.railway.app`;
 
   const getUserSpaces = async () => {
-    const res = await Axios.post(`https://devcom69.herokuapp.com/get-users-spaces`, {
+    const res = await Axios.post(`https://devcom-production.up.railway.app/get-users-spaces`, {
       username: user.username,
     });
     localStorage.setItem("user_spaces", JSON.stringify(res.data));
@@ -34,7 +34,7 @@ const Chat = () => {
   };
 
   const submitSearch = async () => {
-    const res = await Axios.post(`https://devcom69.herokuapp.com/search-space`, {
+    const res = await Axios.post(`https://devcom-production.up.railway.app/search-space`, {
       username: user.username,
       search: search,
     });
@@ -51,7 +51,7 @@ const Chat = () => {
     const data = { username, id, message };
     console.log(data);
     if (message) {
-      await Axios.post("https://devcom69.herokuapp.com/send-message", data, {
+      await Axios.post("https://devcom-production.up.railway.app/send-message", data, {
         headers: { "Content-Type": "application/json" },
       })
         .then((response) => {
