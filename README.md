@@ -26,7 +26,7 @@ A web application where we can search for developers looking to do hackathons or
 
 Link: https://devcom-xi.vercel.app/
 <br/>
-Backend: https://devcom-production.up.railway.app
+Backend: https://devcom-production.onrender.com
 
 ## Architecture of the web app
 

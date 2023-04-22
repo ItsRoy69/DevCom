@@ -39,7 +39,7 @@ const Profile = () => {
         alert("Profile Picture Changed Successfully!");
         getDownloadURL(ref(storage, `profileImages/${profileImg.name}`)).then(
           (url) => {
-            Axios.patch(`https://devcom-production.up.railway.app/updateUser/${user._id}`, {
+            Axios.patch(`https://devcom-production.onrender.com/updateUser/${user._id}`, {
               profilePic: url,
             })
               .then((res) => {
@@ -71,7 +71,7 @@ const Profile = () => {
         alert("Cover Picture Changed Successfully!");
         getDownloadURL(ref(storage, `coverImages/${coverImg.name}`)).then(
           (url) => {
-            Axios.patch(`https://devcom-production.up.railway.app/updateUser/${user._id}`, {
+            Axios.patch(`https://devcom-production.onrender.com/updateUser/${user._id}`, {
               coverPic: url,
             })
               .then((res) => {
@@ -90,7 +90,7 @@ const Profile = () => {
   useEffect(() => {
     console.log(username);
     const setUserDetails = async () => {
-      const res = await Axios.post("https://devcom-production.up.railway.app/getUser", {
+      const res = await Axios.post("https://devcom-production.onrender.com/getUser", {
         username: username,
       });
       console.log(res.data);
