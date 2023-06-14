@@ -10,7 +10,7 @@ import Articles from "./pages/Articles/Articles";
 import Chat from "./pages/Chat/Chat";
 import Sidebar from "./components/Sidebar/Sidebar";
 import SignIn from "./pages/SignIn/SignIn";
-import SignUp from "./pages/Signup/SignUp";
+import SignUp from "./pages/SignUp/SignUp";
 import Profile from "./pages/Profile/Profile";
 import Help from "./pages/Help/Help";
 import TeamFinderCard from "./components/TeamFinder/TeamFinderCard";
