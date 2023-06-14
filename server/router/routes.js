@@ -176,12 +176,17 @@ router.post("/post-like", async (req, res) => {
 
 
 
-router.patch("/updateUser/:id", async (req, res) => {
+router.patch("/updateUser/:id", auth, async (req, res) => {
   const _id = req.params.id;
   try {
     const updateUser = await User.findByIdAndUpdate(_id, req.body, {
       new: true,
     });
+
+    if (!updateUser) {
+      return res.status(404).json({ message: "User not found." });
+    }
+    
     res.status(200).json({ updateUser, success: true });
   } catch (e) {
     res.status(500);

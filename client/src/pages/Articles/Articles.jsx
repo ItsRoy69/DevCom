@@ -4,33 +4,29 @@ import { articles_list } from "./articles_data";
 
 const Articles = () => {
   return (
-    <div className="art-body">
-      <h1>Top Articles</h1>
-    
-    {articles_list.map((item)=>{
-      return(
-        <div className="articles" key={item.id}>
-        {/* <div className="art-img"> */}
-        <img
-          className="art-img"
-          src={item.img_url}
-          alt=""
-        />
-        {/* </div> */}
-        <div className="art-content">
-          <div className="art-para">
-            <h2>{item.heading}</h2>
-            <p>
-             {item.sub_head}
-            </p>
-          
-            <a href={item.arti_link} target="_blank">  <button className="art-btn">Read More</button></a>
-          </div>
-          
-        </div>
+    <div className="articlesmain">
+      <div className="articleshead">
+        <h1>Articles</h1>
       </div>
-      )
-    })}
+
+      {articles_list.map((item) => {
+        return (
+          <div className="articles" key={item.id}>
+            <img className="article-img" src={item.img_url} alt="" />
+            <div className="article-content">
+              <div className="article-para">
+                <h2>{item.heading}</h2>
+                <p>{item.sub_head}</p>
+
+                <a href={item.arti_link} target="_blank">
+                  {" "}
+                  <button className="article-btn">Read More</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

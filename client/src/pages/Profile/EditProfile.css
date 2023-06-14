@@ -1,165 +1,210 @@
-.edit-con{
-    padding: 20px 30px;
-    min-height: 100%;
-    max-height: 100vh;
-    height: auto;
-    overflow: auto;
-    font-family: Product;
-    background-color: #EFF5FF;;
-    border-left: 1px dashed #3364FF;
-    
-}
-.ph{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-
-}
-.gh{
-    display: flex;
-    gap: 10px;
-    /* align-items: center; */
-}
-.edit-con::-webkit-scrollbar {
-    display: none;
+.editprofile {
+  min-height: 100%;
+  max-height: 100vh;
+  height: auto;
+  overflow: auto;
+  font-family: Lexend, sans-serif;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
-.edit-main-con{
-    margin-top: 30px;
+.editprofileheader {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.edit-main-con label{
-    font-size: 22px;
-    font-weight: bold;
-    color: #3364FF;
-    margin-bottom: 10px;
+.editprofileheadcontent {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: var(--text-primary);
+  cursor: pointer;
 }
 
-.edit-main-con input{
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 0 10px;
-    font-size: 18px;
-    color: #000;
-    margin-bottom: 10px;
+.editprofileheadcontent h1 {
+  font-size: 30px;
+  padding-top: 20px;
+  font-family: Lexend, sans-serif;
 }
 
-.edit-fullname, .edit-github, .edit-linkedIn,.edit-profimage ,.edit-covimage,.edit-institution, .edit-collegeStream, .edit-collegeYear, .edit-about{
-    display: flex;
-    flex-direction: column;
+.editprofileback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d5dcf7;
+  transition: 0.2s;
 }
 
-.edit-submit-btn{
-    width: 140px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #EFF5FF;
-    color: #3364FF;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px auto;
-    border: 2px solid #3364FF;
-    box-shadow: 2px 1px 5px #3364ff;
-}
-.edit-submit-btn:hover{
-    color: white;
-    background-color: #3364FF;
+.editprofileback:hover {
+  cursor: pointer;
+  transition: 0.6s;
+  box-shadow: 3px 2px 12px rgba(66, 164, 255, 0.24);
 }
 
-.sec1, .sec2{
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
+.editprofileback img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
 }
 
-.sec1 .sec2 input{
-    width: 300px;
+.editprofile p {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--primary-blue);
+  font-family: Lexend, sans-serif;
+  font-start: none;
 }
 
-.edit-about textarea{
-    min-height: 120px;
-    width: 80%;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 18px;
-    color: #000;
-    margin-bottom: 10px;
+.editprofilecontent {
+  margin-top: 20px;
 }
 
-.edit-skills, .edit-achievements, .edit-experience, .edit-projects{
-    margin-top: 15px;
-    width: 80%;
-}
-.edit-achievements, .edit-experience, .edit-projects > label{
-    margin-bottom: 15px !important;
-    width: 80%;
+.editprofilecontent label {
+  font-size: 16px;
+  color: #5c5c5c;
+  font-family: Lexend, sans-serif;
+  font-style: normal;
 }
 
-
-.roww{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 10px;
-}
-.roww input{
-    width: 20%;
-    
-}
-input{
-    border: none;
-}
-textarea{
-    border: none;
-    box-shadow: 2px 2px 1px 2px #cecece;
-}
-textarea:focus{
-    outline: none;
-}
-.edit-con-header{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-.back-con{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #d5dcf7;
+.editprofilesec input {
+  width: 220px;
+  height: 40px;
+  background: #25262b;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  outline: none;
 }
 
-.back-con:hover{
-    cursor: pointer;
+.editprofilesec {
+  max-width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+  flex-direction: row;
 }
 
-.back-con img{
-    width: 30px;
-    height: 30px;
+.githublogo {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  color: #5c5c5c;
+  /* align-items: center; */
 }
-.as{
-    margin-bottom: 15px;
-    align-items: center;
-    display: flex;
-    gap: 10px;
+
+.editprofile::-webkit-scrollbar {
+  display: none;
 }
-.ws{
-    margin-bottom: 15px;
-    /* align-items: center; */
-    display: flex;
-    gap: 10px;
+
+.edit-about {
+  display: flex;
+  flex-direction: column;
 }
-.edit-covimage input{
-    width: 250px;
+
+.edit-about textarea {
+  min-height: 120px;
+  max-height: 200px;
+  margin-bottom: 10px;
+  background: #25262b;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  overflow: auto;
+  resize: vertical;
+  width: 95%;
+}
+
+.editprofilesec2 input {
+  width: 200px;
+  height: 40px;
+  background: #25262b;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.editprofilesec2 {
+  max-width: 100%;
+  width: 100%;
+  grid-gap: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.edit-achievements input, .edit-experience input, .edit-projects input {
+  margin-bottom: 10px;
+  background: #25262b;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  overflow: auto;
+  resize: vertical;
+  width: 95%;
+}
+
+.editlists {
+  padding: 20px;
+  background: linear-gradient(
+    253.09deg,
+    rgba(25, 36, 59, 0.25) -7.53%,
+    rgba(208, 208, 208, 0.085) 97.04%
+  );
+  border-radius: 10px;
+  border: 1px solid rgba(208, 208, 208, 0.085);
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.editlisted {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.edit-submit-btn {
+  padding: 10px 24px;
+  background: linear-gradient(123.28deg, #306bff 4.69%, #040e3a 289.88%);
+  color: var(--text-primary);
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+  width: 100px;
+}
+
+.edit-submit-btn:hover {
+  box-shadow: 3px 2px 12px rgba(66, 164, 255, 0.24);
+  transition: 0.3s;
+  cursor: pointer;
+
 }

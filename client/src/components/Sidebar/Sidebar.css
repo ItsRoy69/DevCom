@@ -1,78 +1,79 @@
-.sidebar{
-    font-family: Product;
-    background-color: #EFF5FF;
-    height: 100vh;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 2px 0px 31px -6px rgba(0, 0, 0, 0.25);
-}
-.header{
-    padding-right: 22px;
-    color: #3364FF;
-}
-.sidebar_top{
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 10px;
-    white-space: nowrap;
-    align-items: center;
-    height: 50px;
-    gap: 30px;
-}
-.sidebar_top img{
-    height: 30px;
-}
-.sidebar_top img:hover{
-    cursor: pointer;
+.sidebar-main {
+  display: flex;
+  height: 100vh;
+  background-color: var(--landing-bg);
 }
 
-.main-con{
-    display: flex;
+.sidebar {
+  font-family: "Lexend", sans-serif;
+  padding: 10px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--app-primary);
+  border-radius: 10px;
+  z-index: 1;
 }
 
-.routes{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 30px;
+.sidebar_top {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+  white-space: nowrap;
+  align-items: center;
+  height: 100px;
+  gap: 30px;
 }
 
-.route_con, .logout{
-    display: flex;
-    align-items: flex-start;
-    padding: 10px 10px;
-    white-space: nowrap;
-}
-.route_con img, .logout img{
-    width: 28px;
+.dashboardlogo {
+  width: 120px;
+  height: 100px;
 }
 
-.link_text, .logout p{
-    padding-top: 3px;
-    padding-left: 22px;
-    font-size: 18px;
-    color: #5C5C5C;
-}
-a{
-    text-decoration: none;
+.hamlogo {
+  height: 30px;
 }
 
-.logout{
-    border-top: 2px solid #E5E5E5;
-}
-.logout:hover{
-    cursor: pointer;
+.hamlogo:hover {
+  cursor: pointer;
 }
 
-main{
-    /* padding-left: 20px; */
-    width: 100vw;
-    
+.sidebar_mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-main h1{
-    color: #3364FF;
+
+.sidebar_links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.sidebarlink_icon,
+.sidebar_bottom img {
+  width: 30px;
+}
+
+.sidebarlink_text,
+.sidebar_bottom p {
+  font-size: 18px;
+  color: #5c5c5c;
+  margin-left: 10px;
+}
+
+.sidebar_bottom {
+  border-top: 2px solid #e5e5e5;
+  padding: 10px;
+  padding-bottom: 0;
+  cursor: pointer;
+  flex-direction: row;
+  display: flex;
+}
+
+.dashcontent {
+  width: 100vw;
 }

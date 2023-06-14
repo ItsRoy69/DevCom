@@ -1,9 +1,9 @@
-import article_logo from '../../assets/icons/article.svg'
-import hackathon_logo from '../../assets/icons/hackathon.svg'
-import dashboard_logo from '../../assets/icons/dashboard.svg'
-import chat_logo from '../../assets/icons/chats.svg'
-import profile_logo from '../../assets/icons/profile.svg'
-import help_logo from '../../assets/icons/help.svg'
+import article_logo from '../../assets/icons/article.png'
+import hackathon_logo from '../../assets/icons/hackathon.png'
+import dashboard_logo from '../../assets/icons/dashboard.png'
+import chat_logo from '../../assets/icons/chats.png'
+import profile_logo from '../../assets/icons/profile.png'
+import help_logo from '../../assets/icons/help.png'
 
 const routes = [
     {

@@ -1,4 +1,3 @@
-// Code contributed by Aditya Mondal
 
 const hackathons = [
     {

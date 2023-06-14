@@ -1,5 +1,3 @@
-// Code contributed by Aditya Mondal
-
 const Skills = [
     {
        id : "1",

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./EditProfile.css";
-import { UpdateUser } from "../../service/Api";
-import { Chips } from "../../components/Chips/Chips";
+
 import { useNavigate } from "react-router-dom";
 import Back_icon from "../../assets/icons/back.png";
 import { AiOutlineEdit } from "react-icons/ai";
@@ -11,7 +10,11 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { MdWork } from "react-icons/md";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { BsPersonFill } from "react-icons/bs";
-import {MdInsertPhoto} from "react-icons/md"
+import { MdInsertPhoto } from "react-icons/md";
+
+import { UpdateUser } from "../../service/Api";
+import { Chips } from "../../components/Chips/Chips";
+
 export const EditProfile = () => {
   const user_info = JSON.parse(localStorage.getItem("user_info"));
   const navigate = useNavigate();
@@ -58,38 +61,43 @@ export const EditProfile = () => {
     experiences,
     projects,
   };
+
   function addSkill(e) {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" || e.key === ",") {
       if (skills.indexOf(e.target.value) === -1) {
         setSkills([...skills, e.target.value]);
         e.target.value = "";
       }
     }
   }
+
   function addAchievement(e) {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" || e.key === ",") {
       if (achievements.indexOf(e.target.value) === -1) {
         setAchievements([...achievements, e.target.value]);
         e.target.value = "";
       }
     }
   }
+
   function addExperience(e) {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" || e.key === ",") {
       if (experiences.indexOf(e.target.value) === -1) {
         setExperiences([...experiences, e.target.value]);
         e.target.value = "";
       }
     }
   }
+
   function addProject(e) {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" || e.key === ",") {
       if (projects.indexOf(e.target.value) === -1) {
         setProjects([...projects, e.target.value]);
         e.target.value = "";
       }
     }
   }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const submission = await UpdateUser(username, obj);
@@ -104,14 +112,12 @@ export const EditProfile = () => {
 
   const deleteSkill = (idx) => {
     console.log("Deleted Skill");
-    //delete index idx from skills
     const newSkills = skills.filter((skill) => skill !== idx);
     setSkills(newSkills);
   };
 
   const deleteAchievement = (idx) => {
     console.log("Deleted Achievement");
-    //delete index idx from skills
     const newAchievements = achievements.filter(
       (achievement) => achievement !== idx
     );
@@ -120,7 +126,6 @@ export const EditProfile = () => {
 
   const deleteExperience = (idx) => {
     console.log("Deleted Experience");
-    //delete index idx from skills
     const newExperiences = experiences.filter(
       (experience) => experience !== idx
     );
@@ -129,21 +134,25 @@ export const EditProfile = () => {
 
   const deleteProject = (idx) => {
     console.log("Deleted Project");
-    //delete index idx from skills
     const newProjects = projects.filter((project) => project !== idx);
     setProjects(newProjects);
   };
 
   return (
-    <div className="edit-con">
-      <div className="edit-con-header">
-        <div className="ph">
-          <h1 style={{ color: "#3364FF" }}>Profile Edit</h1>{" "}
-          <AiOutlineEdit size={30} style={{ fill: "#3364FF" }} />
+    <div className="editprofile">
+      <div className="editprofileheader">
+        <div
+          className="editprofileheadcontent"
+          onClick={() => {
+            navigate("/profile");
+          }}
+        >
+          <h1>Profile Edit</h1>{" "}
+          <AiOutlineEdit size={30} style={{ paddingTop: "20px" }} />
         </div>
 
         <div
-          className="back-con"
+          className="editprofileback"
           onClick={() => {
             navigate("/profile");
           }}
@@ -153,10 +162,13 @@ export const EditProfile = () => {
       </div>
 
       <p>Add your details here!</p>
-      <div className="edit-main-con">
-        <div className="sec1">
+      <div className="editprofilecontent">
+        <div className="editprofilesec">
           <div className="edit-fullname">
-            <label>Name</label>
+            <div className="githublogo">
+              <label>Name</label>
+            </div>
+
             <input
               type="text"
               value={fullname}
@@ -164,9 +176,9 @@ export const EditProfile = () => {
             />
           </div>
           <div className="edit-github">
-            <div className="gh">
+            <div className="githublogo">
               <label>GitHub</label>
-              <FaGithubSquare size={25} style={{ fill: "#3364FF" }} />
+              <FaGithubSquare size={25} />
             </div>
 
             <input
@@ -176,9 +188,9 @@ export const EditProfile = () => {
             />
           </div>
           <div className="edit-linkedIn">
-            <div className="gh">
+            <div className="githublogo">
               <label>LinkedIn</label>
-              <AiFillLinkedin size={25} style={{ fill: "#3364FF" }} />
+              <AiFillLinkedin size={25} />
             </div>
 
             <input
@@ -188,9 +200,9 @@ export const EditProfile = () => {
             />
           </div>
           <div className="edit-profimage">
-            <div className="gh">
+            <div className="githublogo">
               <label>Profile Image URL</label>
-              <BsPersonFill size={25} style={{ fill: "#3364FF" }} />
+              <BsPersonFill size={25} />
             </div>
 
             <input
@@ -201,12 +213,10 @@ export const EditProfile = () => {
               }}
             />
           </div>
-       
-        </div>
-        <div className="edit-covimage">
-            <div className="gh">
+          <div className="edit-covimage">
+            <div className="githublogo">
               <label>Cover Image URL</label>
-              <MdInsertPhoto size={25} style={{ fill: "#3364FF" }} />
+              <MdInsertPhoto size={25} />
             </div>
 
             <input
@@ -217,10 +227,10 @@ export const EditProfile = () => {
               }}
             />
           </div>
-        <div className="sec2">
-            
           <div className="edit-institution">
-            <label>Instituition</label>
+            <div className="githublogo">
+              <label>Instituition</label>
+            </div>
             <input
               type="text"
               value={institution}
@@ -228,8 +238,9 @@ export const EditProfile = () => {
             />
           </div>
           <div className="edit-collegeStream">
-            <label>College Stream</label>
-
+            <div className="githublogo">
+              <label>College Stream</label>
+            </div>
             <input
               type="text"
               value={collegeStream}
@@ -237,7 +248,9 @@ export const EditProfile = () => {
             />
           </div>
           <div className="edit-collegeYear">
-            <label>College Year</label>
+            <div className="githublogo">
+              <label>College Year</label>
+            </div>
             <input
               type="text"
               value={collegeYear}
@@ -245,17 +258,21 @@ export const EditProfile = () => {
             />
           </div>
         </div>
-
         <div className="edit-about">
-          <label>About</label>
+          <div className="githublogo">
+            <label>About</label>
+          </div>
+
           <textarea
             value={about}
             onChange={(e) => setAbout(e.target.value)}
           ></textarea>
         </div>
-        <div className="edit-skills">
-          <div className="roww">
-            <label>Skills</label>
+        <div className="editprofilesec2">
+          <div className="edit-skills">
+            <div className="githublogo">
+              <label>Skills</label>
+            </div>
             <input
               type="text"
               onKeyDown={(e) => {
@@ -263,7 +280,7 @@ export const EditProfile = () => {
               }}
             />
           </div>
-          <div className="roww">
+          <div className="skill-body">
             {skills.map((skill, idx) => {
               return (
                 <div onClick={() => deleteSkill(skill)}>
@@ -272,11 +289,20 @@ export const EditProfile = () => {
               );
             })}
           </div>
+
+          <p
+            className="teamfinderinputs"
+            style={{ color: "#306BFF", paddingBottom: "20px" }}
+          >
+            (Enter skill & press ',' button for saving the skills. To delete
+            click on the specific skills)
+          </p>
         </div>
+
         <div className="edit-achievements">
-          <div className="as">
+          <div className="githublogo">
             <label>Achievements</label>
-            <FaMedal size={25} style={{ fill: "#3364FF" }} />
+            <FaMedal size={25} />
           </div>
 
           <input
@@ -285,53 +311,64 @@ export const EditProfile = () => {
               addAchievement(e);
             }}
           />
-          <ul>
-            {achievements.map((achievement, idx) => {
-              return (
+          {achievements.map((achievement, idx) => {
+            return (
+              <ul className="editlists">
                 <li
-                  className="lists"
+                  className="editlisted"
                   key={idx}
                   onClick={() => deleteAchievement(achievement)}
                 >
-                  {achievement}
+                  <p>{achievement}</p>
                 </li>
-              );
-            })}
-          </ul>
+              </ul>
+            );
+          })}
+          <p
+            className="teamfinderinputs"
+            style={{ color: "#306BFF", paddingBottom: "20px" }}
+          >
+            (Enter achievement & press 'Enter' button for saving the
+            achievements. To delete click on the specific achievements)
+          </p>
         </div>
-        <div className="edit-experience">
-          <div className="ws">
-            <label>Experience</label>
-            <MdWork size={25} style={{ fill: "#3364FF" }} />
-          </div>
 
+        <div className="edit-experience">
+          <div className="githublogo">
+            <label>Experience</label>
+            <MdWork size={25} />
+          </div>
           <input
             type="text"
             onKeyDown={(e) => {
               addExperience(e);
             }}
           />
-          <ul>
-            {experiences.map((experience, idx) => {
-              return (
+          {experiences.map((experience, idx) => {
+            return (
+              <ul className="editlists">
                 <li
-                  className="lists"
+                  className="editlisted"
                   key={idx}
                   onClick={() => deleteExperience(experience)}
                 >
                   {experience}
                 </li>
-              );
-            })}
-          </ul>
+              </ul>
+            );
+          })}
+          <p
+            className="teamfinderinputs"
+            style={{ color: "#306BFF", paddingBottom: "20px" }}
+          >
+            (Enter experience & press 'Enter' button for saving the experiences.
+            To delete click on the specific experiences)
+          </p>
         </div>
         <div className="edit-projects">
-          <div className="ws">
+          <div className="githublogo">
             <label>Projects</label>
-            <AiOutlineFundProjectionScreen
-              size={25}
-              style={{ fill: "#3364FF" }}
-            />
+            <AiOutlineFundProjectionScreen size={25} />
           </div>
 
           <input
@@ -340,19 +377,26 @@ export const EditProfile = () => {
               addProject(e);
             }}
           />
-          <ul>
-            {projects.map((project, idx) => {
-              return (
+          {projects.map((project, idx) => {
+            return (
+              <ul className="editlists">
                 <li
-                  className="lists"
+                  className="editlisted"
                   key={idx}
                   onClick={() => deleteProject(project)}
                 >
                   {project}
                 </li>
-              );
-            })}
-          </ul>
+              </ul>
+            );
+          })}
+          <p
+            className="teamfinderinputs"
+            style={{ color: "#306BFF", paddingBottom: "20px" }}
+          >
+            (Enter project & press 'Enter' button for saving the projects.
+            To delete click on the specific projects)
+          </p>
         </div>
       </div>
       <div onClick={handleSubmit} className="edit-submit-btn">
