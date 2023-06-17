@@ -35,7 +35,7 @@ const SignIn = ({ setIsLoggedIn }) => {
     } else {
       const reg = await LoginUser(credentials);
       console.log(reg);
-      if (reg.data.sucess === true) {
+      if (reg.data.success === true) {
         alert("USER LOGGED IN !! ");
         localStorage.setItem("token", reg.data.token);
         localStorage.setItem("user_info", JSON.stringify(reg.data.user));
@@ -43,7 +43,7 @@ const SignIn = ({ setIsLoggedIn }) => {
         navigate("/");
       }
 
-      if (reg.data.sucess === false) {
+      if (reg.data.success === false) {
         alert("Invalid Credentials!! ");
         navigate("/signin");
       }

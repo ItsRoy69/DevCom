@@ -62,10 +62,10 @@ router.post("/register", async (req, res) => {
 
       const registered = await user.save();
 
-      res.status(201).json({ message: "Registered Successfully!", sucess: true });
+      res.status(201).json({ message: "Registered Successfully!", success: true });
     }
   } catch (e) {
-    res.status(500).json({ message: `Could not create account! --> ${e}`, sucess: false });
+    res.status(500).json({ message: `Could not create account! --> ${e}`, success: false });
   }
 });
 
@@ -95,7 +95,7 @@ router.post("/login", async (req, res) => {
       res.json({
         message: "Logged In Successfully!",
         token: token,
-        sucess: true,
+        success: true,
         user: user,
       });
     } else {
@@ -459,7 +459,7 @@ router.post("/login-with-google", async (req, res) => {
       res.json({
         message: "Logged In Successfully!",
         token: token,
-        sucess: true,
+        success: true,
         user: user,
       });
     } else {

@@ -40,12 +40,12 @@ const SignUp = () => {
         navigate("/signin");
       }
 
-      if (reg.data.sucess === true) {
+      if (reg.data.success === true) {
         alert("USER CREATED !! ");
         navigate("/");
       }
 
-      if (reg.data.sucess === false && reg.data.exists !== true) {
+      if (reg.data.success === false && reg.data.exists !== true) {
         alert("ERROR");
         setcredentials({
           fullname: "",
