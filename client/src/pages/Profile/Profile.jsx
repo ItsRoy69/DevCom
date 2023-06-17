@@ -340,7 +340,7 @@ const Profile = () => {
             <div className="profilepicedit">
               <div className="profilepicedithead">
                 <input type="file" onChange={handleProfileChange}></input>
-                {loader ? <div class="loader"></div> : null}
+                {loader ? <div className="loader"></div> : null}
               </div>
               <div className="profilepiceditbtn">
                 <div type="submit" id="sb" onClick={handleProfileUpload}>
@@ -363,7 +363,7 @@ const Profile = () => {
               <div className="profilepicedit">
                 <div className="profilepicedithead">
                   <input type="file" onChange={handleCoverChange}></input>
-                  {loader ? <div class="loader"></div> : null}
+                  {loader ? <div className="loader"></div> : null}
                 </div>
                 <div className="profilepiceditbtn">
                   <div type="submit" id="sb" onClick={handleCoverUpload}>

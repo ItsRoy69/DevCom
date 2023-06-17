@@ -136,15 +136,13 @@
   align-self: center;
 }
 
-.write-con.intro-graphics {
-  max-width: 50%;
+.feed-search.intro-graphic {
+  max-width: 100%;
   z-index: 1;
   position: absolute;
-}
-.write-con .intro-graphic {
   text-align: center;
 }
-.write-con .intro-graphic img {
-  display: inline-block;
-  width: 80%;
+
+.feed-search .intro-graphic img {
+  width: 100%;
 }

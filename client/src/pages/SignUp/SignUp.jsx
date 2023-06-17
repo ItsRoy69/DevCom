@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
 import { RegisterUser } from "../../service/Api";
 import "./SignUp.css";
 
@@ -99,10 +98,6 @@ const SignUp = () => {
             </p>
             <br />
 
-            <button className="gbtn">
-              <FcGoogle />
-              Register with Google
-            </button>
 
             <form className="auth-inp" action="">
               <div className="inp-box">
@@ -165,7 +160,7 @@ const SignUp = () => {
 
             <p className="auth-link">
               Already have an account?{" "}
-              <a onClick={() => navigate("/")}>Login</a>
+              <a onClick={() => navigate("/login")}>Login</a>
             </p>
           </div>
         </div>
