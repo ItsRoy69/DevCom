@@ -215,7 +215,7 @@ router.post("/create-space", async (req, res) => {
   try {
     const {admin, members, spaceName, chatPic } = req.body;
 
-    if (!spaceName || !members || !chatPic) {
+    if (!spaceName || !members || chatPic === null) {
       return res.status(422).json({ error: "Please fill all the fields." });
     }
     const userFound = await User.findOne({ username: admin });

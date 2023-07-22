@@ -117,11 +117,16 @@ export const FeedCard = ({ post, recall }) => {
       obj
     );
     console.log(res.data.message);
-    const sendMessage = await Axios.post(
-      "https://devcom-production.onrender.com/send-email",
-      { email: post.email, name: fullname }
-    );
-    console.log(sendMessage.data.message);
+    try {
+      const sendMessage = await Axios.post(
+        "https://devcom-production.onrender.com/send-email",
+        { email: post.email, name: fullname }
+      );
+      console.log(sendMessage.data.message);
+    }
+    catch(err) {
+      console.log(err);
+    }
     navigate("/messages");
   }
   return (
